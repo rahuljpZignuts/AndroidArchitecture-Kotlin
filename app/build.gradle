@@ -134,7 +134,7 @@ kapt {
 apply from: "quick_start.gradle"
 
 task QuickStartProject{
-    def newPackageName = "com.test.rahul"
-    def rootProjectName = "Testing App Rahul"
+    def newPackageName = "com.rahul.kotlin.architecture"
+    def rootProjectName = "Android Kotlin Architecture"
     quickSetup.execute(newPackageName,rootProjectName)
 }

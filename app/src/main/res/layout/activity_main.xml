@@ -15,7 +15,7 @@
             android:gravity="center"
             android:text="Hello World!" />
 
-        <com.test.rahul.ui.widget.StateLayout
+        <com.rahul.kotlin.architecture.ui.widget.StateLayout
             android:id="@+id/state_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -25,6 +25,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Data not loaded" />
-        </com.test.rahul.ui.widget.StateLayout>
+        </com.rahul.kotlin.architecture.ui.widget.StateLayout>
     </LinearLayout>
 </layout>

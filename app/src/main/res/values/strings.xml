@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Testing Rahul</string>
+    <string name="app_name">Android Kotlin Architecture</string>
     <string name="error_unexpected_behaviour_description">Unexpected Error Occurred</string>
     <string name="ok">OK</string>
     <string name="error">error</string>

@@ -2,7 +2,7 @@
 
 buildscript {
     ext.application = [
-            id                      : "com.test.rahul",
+            id                      : "com.rahul.kotlin.architecture",
             versionCode             : 1,
             versionName             : "1.0.0",
     ]

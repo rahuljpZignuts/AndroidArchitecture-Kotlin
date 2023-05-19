@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    Custom declared styleables and their attributes-->
+    <declare-styleable name="StateLayout">
+        <!-- Flag that can be marked true if the original content is not wrapped in it and it is
+         used only as an overlay for showing progress and error state, default false as the
+         recommended way is to wrap children in it. -->
+        <attr name="behaviour_asOverlay" format="boolean" />
+        <!-- Image reference to show in empty state. -->
+        <attr name="emptyState_imageResource" format="reference" />
+        <!-- Layout reference to customize the layout for default empty state provider.
+        Please make sure to follow the same hierarchy as in default empty state layout or
+        add custom state provider for more customization. -->
+        <attr name="emptyState_layoutResource" format="reference" />
+        <!-- Text/title to show in empty state. -->
+        <attr name="emptyState_titleText" format="string" />
+        <!-- Subtext/description to show in empty state (optional). -->
+        <attr name="emptyState_descriptionText" format="string" />
+        <!-- Layout reference to customize the layout for default progress state provider. -->
+        <attr name="progressState_layoutResource" format="reference" />
+        <!-- Flag to indicate usage of default connectivity state provider; inherits default
+        value as well as provider from empty state as it may generally be required in combination
+        with empty state-->
+        <attr name="default_connectivityState" format="boolean" />
+        <!-- Flag to indicate usage of default default data state provider that handles most common
+        states like data, success, failure, etc; default true because we will be needing this in
+        most cases. -->
+        <attr name="default_stateProvider" format="boolean" />
+        <!-- Flag to indicate usage of default empty state provider; default false as it may only
+        be required for content with lists. -->
+        <attr name="default_emptyState" format="boolean" />
+        <!-- Flag to indicate usage of default progress state provider; default true because we
+        will be needing this in most cases. -->
+        <attr name="default_progressState" format="boolean" />
+        <!-- Flag to indicate usage of default skeleton state provider; default false as it may only
+        be required for content with lists. -->
+        <attr name="default_skeletonState" format="boolean" />
+        <!-- Flag to indicate whether progressbar in progress state should be overlapping with existing view.
+        default value is true . currently used for TV app only-->
+        <attr name="shouldProgressOverlay" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="StateLayout_Layout">
+        <!-- Attribute to identify if the view should be referred as actual content container when
+        used with default data state provider that provides support for managing content visibility
+        based on parent view other common application logic -->
+        <attr name="layout_state_content" format="boolean" />
+        <!-- Attribute to identify if the view should be referred as success state container when
+        used with default data state provider that provides support for managing content visibility
+        based on parent view other common application logic -->
+        <attr name="layout_state_success" format="boolean" />
+        <!-- Attribute to identify if the view should be referred as failure state container when
+        used with default data state provider that provides support for managing content visibility
+        based on parent view other common application logic -->
+        <attr name="layout_state_failure" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="FullScreenContent">
+        <attr name="android:padding" format="dimension" />
+        <attr name="android:paddingTop" format="dimension" />
+        <attr name="android:paddingBottom" format="dimension" />
+        <attr name="android:paddingEnd" format="dimension" />
+        <attr name="android:paddingStart" format="dimension" />
+        <attr name="layout_includeStatusBar" format="boolean" />
+        <attr name="layout_includeNavigationBar" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="NestedContent">
+        <attr name="android:minHeight" format="dimension" />
+        <attr name="android:maxHeight" format="dimension" />
+        <attr name="minHeightRatio" format="float" />
+        <attr name="maxHeightRatio" format="float" />
+        <attr name="heightType" format="enum">
+            <enum name="screen" value="0" />
+            <enum name="parent" value="1" />
+            <enum name="dimension" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

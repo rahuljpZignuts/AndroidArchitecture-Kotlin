@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Testing Rahul</string>
+    <string name="error_unexpected_behaviour_description">Unexpected Error Occurred</string>
+    <string name="ok">OK</string>
+    <string name="error">error</string>
+    <string name="error_message_connectivity">Connection lost. Please check your Internet settings and try again.</string>
+    <string name="error_message_unexpected_behaviour">Cannot connect to the server. Please try again in some time.</string>
+    <string name="days_ago">{0} days ago</string>
+    <string name="hours_ago">{0} hours ago</string>
+    <string name="mins_ago">{0} minutes ago</string>
+    <string name="just_now">Just Now</string>
+</resources>

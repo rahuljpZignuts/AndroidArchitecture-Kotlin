@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.App.TextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+
+    <style name="Widget.App.TextView.Body.ExtraSmall.Bold" parent="Widget.App.TextView">
+        <item name="android:fontFamily">?attr/fontFamilyBold</item>
+        <item name="android:textAppearance">?attr/textAppearanceBodyExtraSmallBold</item>
+        <item name="fontFamily">?attr/fontFamilyBold</item>
+        <item name="fontWeight">700</item>
+    </style>
+
+    <style name="Widget.App.TextView.Body.ExtraSmall.Medium" parent="Widget.App.TextView">
+        <item name="android:fontFamily">?attr/fontFamilyMedium</item>
+        <item name="android:textAppearance">?attr/textAppearanceBodyExtraSmallMedium</item>
+        <item name="fontFamily">?attr/fontFamilyMedium</item>
+        <item name="fontWeight">500</item>
+    </style>
+
+    <style name="Widget.App.TextView.Body.ExtraSmall.Regular" parent="Widget.App.TextView">
+        <item name="android:fontFamily">?attr/fontFamilyRegular</item>
+        <item name="android:textAppearance">?attr/textAppearanceBodyExtraSmallRegular</item>
+        <item name="fontFamily">?attr/fontFamilyRegular</item>
+        <item name="fontWeight">400</item>
+    </style>
+
+    <style name="Widget.App.TextView.Body.ExtraSmall.Regular.Dynamic">
+        <item name="android:textSize">10sp</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMaxTextSize">10sp</item>
+        <item name="autoSizeMinTextSize">6sp</item>
+    </style>
+
+    <style name="Widget.App.TextView.Body.Small.Bold" parent="Widget.App.TextView">
+        <item name="android:fontFamily">?attr/fontFamilyBold</item>
+        <item name="android:textAppearance">?attr/textAppearanceBodySmallBold</item>
+        <item name="fontFamily">?attr/fontFamilyBold</item>
+        <item name="fontWeight">700</item>
+    </style>
+
+    <style name="Widget.App.TextView.Body.Small.Regular" parent="Widget.App.TextView">
+        <item name="android:fontFamily">?attr/fontFamilyRegular</item>
+        <item name="android:textAppearance">?attr/textAppearanceBodySmallRegular</item>
+        <item name="fontFamily">?attr/fontFamilyRegular</item>
+        <item name="fontWeight">400</item>
+    </style>
+
+    <style name="Widget.App.TextView.Body.Standard.Bold" parent="Widget.App.TextView">
+        <item name="android:fontFamily">?attr/fontFamilyBold</item>
+        <item name="android:textAppearance">?attr/textAppearanceBodyStandardBold</item>
+        <item name="fontFamily">?attr/fontFamilyBold</item>
+        <item name="fontWeight">700</item>
+    </style>
+
+    <style name="Widget.App.TextView.Body.Standard.Regular" parent="Widget.App.TextView">
+        <item name="android:fontFamily">?attr/fontFamilyRegular</item>
+        <item name="android:textAppearance">?attr/textAppearanceBodyStandardRegular</item>
+        <item name="fontFamily">?attr/fontFamilyRegular</item>
+        <item name="fontWeight">400</item>
+    </style>
+
+    <style name="Widget.App.TextView.Heading.H1.Light" parent="Widget.App.TextView">
+        <item name="android:fontFamily">?attr/fontFamilyLight</item>
+        <item name="android:textAppearance">?attr/textAppearanceHeadingH1Light</item>
+        <item name="fontFamily">?attr/fontFamilyLight</item>
+        <item name="fontWeight">300</item>
+    </style>
+
+    <style name="Widget.App.TextView.Heading.H1.Regular" parent="Widget.App.TextView">
+        <item name="android:fontFamily">?attr/fontFamilyRegular</item>
+        <item name="android:textAppearance">?attr/textAppearanceHeadingH1Regular</item>
+        <item name="fontFamily">?attr/fontFamilyRegular</item>
+        <item name="fontWeight">400</item>
+    </style>
+
+    <style name="Widget.App.TextView.Heading.H1.Medium" parent="Widget.App.TextView">
+        <item name="android:fontFamily">?attr/fontFamilyMedium</item>
+        <item name="android:textAppearance">?attr/textAppearanceHeadingH1Medium</item>
+        <item name="fontFamily">?attr/fontFamilyMedium</item>
+        <item name="fontWeight">500</item>
+    </style>
+
+    <style name="Widget.App.TextView.Heading.H2.Light" parent="Widget.App.TextView">
+        <item name="android:fontFamily">?attr/fontFamilyLight</item>
+        <item name="android:textAppearance">?attr/textAppearanceHeadingH2Light</item>
+        <item name="fontFamily">?attr/fontFamilyLight</item>
+        <item name="fontWeight">300</item>
+    </style>
+
+    <style name="Widget.App.TextView.Heading.H2.Regular" parent="Widget.App.TextView">
+        <item name="android:fontFamily">?attr/fontFamilyRegular</item>
+        <item name="android:textAppearance">?attr/textAppearanceHeadingH2Regular</item>
+        <item name="fontFamily">?attr/fontFamilyRegular</item>
+        <item name="fontWeight">400</item>
+    </style>
+
+    <style name="Widget.App.TextView.Heading.H2.Medium" parent="Widget.App.TextView">
+        <item name="android:fontFamily">?attr/fontFamilyMedium</item>
+        <item name="android:textAppearance">?attr/textAppearanceHeadingH2Medium</item>
+        <item name="fontFamily">?attr/fontFamilyMedium</item>
+        <item name="fontWeight">500</item>
+    </style>
+
+    <style name="Widget.App.TextView.Heading.H2.Bold" parent="Widget.App.TextView">
+        <item name="android:fontFamily">?attr/fontFamilyBold</item>
+        <item name="android:textAppearance">?attr/textAppearanceHeadingH2Bold</item>
+        <item name="fontFamily">?attr/fontFamilyBold</item>
+        <item name="fontWeight">700</item>
+    </style>
+
+    <style name="Widget.App.TextView.Heading.H3.Regular" parent="Widget.App.TextView">
+        <item name="android:fontFamily">?attr/fontFamilyRegular</item>
+        <item name="android:textAppearance">?attr/textAppearanceHeadingH3Regular</item>
+        <item name="fontFamily">?attr/fontFamilyRegular</item>
+        <item name="fontWeight">400</item>
+    </style>
+
+    <style name="Widget.App.TextView.Heading.H3.Light" parent="Widget.App.TextView">
+        <item name="android:fontFamily">?attr/fontFamilyLight</item>
+        <item name="android:textAppearance">?attr/textAppearanceHeadingH3Light</item>
+        <item name="fontFamily">?attr/fontFamilyLight</item>
+        <item name="fontWeight">300</item>
+    </style>
+
+    <style name="Widget.App.TextView.Heading.H3.Medium" parent="Widget.App.TextView">
+        <item name="android:fontFamily">?attr/fontFamilyMedium</item>
+        <item name="android:textAppearance">?attr/textAppearanceHeadingH3Medium</item>
+        <item name="fontFamily">?attr/fontFamilyMedium</item>
+        <item name="fontWeight">500</item>
+    </style>
+
+    <style name="Widget.App.TextView.Heading.H3.Bold" parent="Widget.App.TextView">
+        <item name="android:fontFamily">?attr/fontFamilyBold</item>
+        <item name="android:textAppearance">?attr/textAppearanceHeadingH3Bold</item>
+        <item name="fontFamily">?attr/fontFamilyBold</item>
+        <item name="fontWeight">700</item>
+    </style>
+
+    <style name="Widget.App.TextView.Heading.H4.Bold" parent="Widget.App.TextView">
+        <item name="android:fontFamily">?attr/fontFamilyBold</item>
+        <item name="android:textAppearance">?attr/textAppearanceHeadingH4Bold</item>
+        <item name="fontFamily">?attr/fontFamilyBold</item>
+        <item name="fontWeight">700</item>
+    </style>
+
+    <style name="Widget.App.TextView.Heading.H4.Regular" parent="Widget.App.TextView">
+        <item name="android:fontFamily">?attr/fontFamilyRegular</item>
+        <item name="android:textAppearance">?attr/textAppearanceHeadingH4Regular</item>
+        <item name="fontFamily">?attr/fontFamilyRegular</item>
+        <item name="fontWeight">400</item>
+    </style>
+
+    <style name="Widget.App.TextView.Heading.H5.Bold" parent="Widget.App.TextView">
+        <item name="android:fontFamily">?attr/fontFamilyBold</item>
+        <item name="android:textAppearance">?attr/textAppearanceHeadingH5Bold</item>
+        <item name="fontFamily">?attr/fontFamilyBold</item>
+        <item name="fontWeight">700</item>
+    </style>
+
+    <style name="Widget.App.TextView.Heading.H5.Regular" parent="Widget.App.TextView">
+        <item name="android:fontFamily">?attr/fontFamilyRegular</item>
+        <item name="android:textAppearance">?attr/textAppearanceHeadingH5Regular</item>
+        <item name="fontFamily">?attr/fontFamilyRegular</item>
+        <item name="fontWeight">400</item>
+    </style>
+
+    <style name="Widget.App.TextView.Heading.H6.Bold" parent="Widget.App.TextView">
+        <item name="android:fontFamily">?attr/fontFamilyBold</item>
+        <item name="android:textAppearance">?attr/textAppearanceHeadingH6Bold</item>
+        <item name="fontFamily">?attr/fontFamilyBold</item>
+        <item name="fontWeight">700</item>
+    </style>
+
+    <style name="Widget.App.TextView.Label.Default.Bold" parent="Widget.App.TextView">
+        <item name="android:fontFamily">?attr/fontFamilyBold</item>
+        <item name="android:textAppearance">?attr/textAppearanceLabelDefaultBold</item>
+        <item name="fontFamily">?attr/fontFamilyBold</item>
+        <item name="fontWeight">700</item>
+    </style>
+
+    <style name="Widget.App.TextView.Label.Small.Bold" parent="Widget.App.TextView">
+        <item name="android:fontFamily">?attr/fontFamilyBold</item>
+        <item name="android:textAppearance">?attr/textAppearanceLabelSmallBold</item>
+        <item name="fontFamily">?attr/fontFamilyBold</item>
+        <item name="fontWeight">700</item>
+    </style>
+</resources>

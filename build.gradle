@@ -1,0 +1,78 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.application = [
+            id                      : "com.test.rahul",
+            versionCode             : 1,
+            versionName             : "1.0.0",
+    ]
+    ext.buildOptions = [
+            buildToolsVersion       : "33.0.0",
+            compileSdkVersion       : 33,
+            minSdkVersion           : 21,
+            targetSdkVersion        : 33,
+            compileOptionsVersion   : JavaVersion.VERSION_1_8,
+            jvmVersion              : JavaVersion.VERSION_1_8,
+    ]
+    ext.buildConfig = [
+            defaultLanguage         : "DEFAULT_LANGUAGE",
+            packageName             : "PACKAGE_NAME",
+            baseUrl                 : "BASE_URL",
+    ]
+    ext.plugin = [
+            "crashlytics"           : "2.9.2",
+            "gradle"                : '7.4.1',
+            "hilt"                  : "2.44",
+            "kotlin"                : "1.8.0",
+            "navigation"            : "2.5.3",
+            "protobuf"              : "3.21.7",
+            "r8"                    : "3.3.75",
+            "versionMatcher"        : "1.2.4",
+    ]
+    ext.versions = [
+            "activity"              : "1.6.1",
+            "appCompat"             : "1.6.1",
+            "collection"            : "1.2.0",
+            "constraintLayout"      : "2.1.4",
+            "core"                  : "1.9.0",
+            "coroutines"            : "1.6.4",
+            "datastore"             : "1.0.0",
+            "hilt"                  : "2.44",
+            "fragment"              : "1.5.5",
+            "glide"                 : "4.14.2",
+            "kotlin"                : "1.7.20",
+            "lifecycle"             : "2.5.1",
+            "logging"               : "5.0.0-alpha.10",
+            "material"              : "1.8.0",
+            "moshi"                 : "1.14.0",
+            "navigation"            : "2.5.3",
+            "navigationFragment"    : "1.0.0",
+            "paging"                : "3.1.1",
+            "protobuf"              : "3.16.3",
+            "retrofit"              : "2.9.0",
+            "room"                  : "2.5.0",
+            "skeletonLayout"        : "4.0.0",
+            "swipeRefreshLayout"    : "1.1.0",
+            "timber"                : "5.0.1",
+    ]
+    ext.testVersions = [
+            "espresso"              : "3.5.1",
+            "junit"                 : "4.13.2",
+            "testJUnit"             : "1.1.5",
+    ]
+
+    repositories {
+        google()
+        gradlePluginPortal()
+    }
+
+    dependencies {
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:${plugin.navigation}"
+        classpath "com.android.tools.build:gradle:${plugin.gradle}"
+        classpath "com.android.tools:r8:${plugin.r8}"
+        classpath "com.google.android.gms:strict-version-matcher-plugin:${plugin.versionMatcher}"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:${plugin.hilt}"
+        classpath "com.google.firebase:firebase-crashlytics-gradle:${plugin.crashlytics}"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${plugin.kotlin}"
+    }
+}

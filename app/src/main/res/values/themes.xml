@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Add base theme attributes here e.g. parent theme based attributes -->
+    <style name="Theme.App.Base" parent="Theme.MaterialComponents.DayNight.NoActionBar" />
+
+    <!-- Add api level attributes here e.g. animations and window configurations -->
+    <style name="Theme.App.Bridge.OS" parent="Theme.App.Base">
+        <!--    Android Theme Attributes   -->
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+    </style>
+
+    <!-- Add typography attributes here e.g. text appearances and styling -->
+    <style name="Theme.App.Bridge.Typography" parent="Theme.App.Bridge.OS">
+        <!-- Material theme attributes -->
+        <item name="materialButtonTextStyle">@style/Widget.App.Button.Link.Standard.Regular</item>
+        <item name="materialButtonTextIconStyle">@style/Widget.App.Button.Link.Standard.Regular
+        </item>
+        <item name="materialButtonOutlinedStyle">@style/Widget.App.Button.OutlinedButton</item>
+        <item name="materialButtonOutlinedIconStyle">@style/Widget.App.Button.OutlinedButton.Icon
+        </item>
+        <item name="materialButtonSecondaryStyle">@style/Widget.App.Button.Secondary</item>
+        <!-- Custom theme attributes -->
+        <!--    Body text   -->
+        <item name="textAppearanceBodyExtraSmallBold">
+            @style/TextAppearance.App.Body.ExtraSmall.Bold
+        </item>
+        <item name="textBodyExtraSmallBoldStyle">@style/Widget.App.TextView.Body.ExtraSmall.Bold
+        </item>
+        <item name="textAppearanceBodyExtraSmallMedium">
+            @style/TextAppearance.App.Body.ExtraSmall.Medium
+        </item>
+        <item name="textBodyExtraSmallMediumStyle">
+            @style/Widget.App.TextView.Body.ExtraSmall.Medium
+        </item>
+        <item name="textAppearanceBodyExtraSmallRegular">
+            @style/TextAppearance.App.Body.ExtraSmall.Regular
+        </item>
+        <item name="textBodyExtraSmallRegularStyle">
+            @style/Widget.App.TextView.Body.ExtraSmall.Regular
+        </item>
+        <item name="textBodyExtraSmallRegularStyleDynamic">
+            @style/Widget.App.TextView.Body.ExtraSmall.Regular.Dynamic
+        </item>
+        <item name="textAppearanceBodySmallBold">@style/TextAppearance.App.Body.Small.Bold</item>
+        <item name="textBodySmallBoldStyle">@style/Widget.App.TextView.Body.Small.Bold</item>
+        <item name="textAppearanceBodySmallRegular">@style/TextAppearance.App.Body.Small.Regular
+        </item>
+        <item name="textBodySmallRegularStyle">@style/Widget.App.TextView.Body.Small.Regular</item>
+        <item name="textAppearanceBodyStandardBold">@style/TextAppearance.App.Body.Standard.Bold
+        </item>
+        <item name="textBodyStandardBoldStyle">@style/Widget.App.TextView.Body.Standard.Bold</item>
+        <item name="textAppearanceBodyStandardRegular">
+            @style/TextAppearance.App.Body.Standard.Regular
+        </item>
+        <item name="textBodyStandardRegularStyle">@style/Widget.App.TextView.Body.Standard.Regular
+        </item>
+        <!--    Headings   -->
+        <item name="textAppearanceHeadingH1Light">@style/TextAppearance.App.Heading.H1.Light</item>
+        <item name="textHeadingH1LightStyle">@style/Widget.App.TextView.Heading.H1.Light</item>
+        <item name="textAppearanceHeadingH1Medium">@style/TextAppearance.App.Heading.H1.Medium
+        </item>
+        <item name="textHeadingH1MediumStyle">@style/Widget.App.TextView.Heading.H1.Medium</item>
+        <item name="textAppearanceHeadingH2Bold">@style/TextAppearance.App.Heading.H2.Bold</item>
+        <item name="textHeadingH2BoldStyle">@style/Widget.App.TextView.Heading.H2.Bold</item>
+        <item name="textAppearanceHeadingH2Light">@style/TextAppearance.App.Heading.H2.Light</item>
+        <item name="textHeadingH2LightStyle">@style/Widget.App.TextView.Heading.H2.Light</item>
+        <item name="textAppearanceHeadingH2Medium">@style/TextAppearance.App.Heading.H2.Medium
+        </item>
+        <item name="textHeadingH2MediumStyle">@style/Widget.App.TextView.Heading.H2.Medium</item>
+        <item name="textAppearanceHeadingH3Regular">@style/TextAppearance.App.Heading.H3.Regular
+        </item>
+        <item name="textHeadingH3RegularStyle">@style/Widget.App.TextView.Heading.H3.Regular</item>
+        <item name="textAppearanceHeadingH3Light">@style/TextAppearance.App.Heading.H3.Light</item>
+        <item name="textHeadingH3LightStyle">@style/Widget.App.TextView.Heading.H3.Light</item>
+        <item name="textAppearanceHeadingH3Medium">@style/TextAppearance.App.Heading.H3.Medium
+        </item>
+        <item name="textHeadingH3MediumStyle">@style/Widget.App.TextView.Heading.H3.Medium</item>
+        <item name="textAppearanceHeadingH4Bold">@style/TextAppearance.App.Heading.H4.Bold</item>
+        <item name="textHeadingH3BoldStyle">@style/Widget.App.TextView.Heading.H3.Bold</item>
+        <item name="textAppearanceHeadingH3Bold">@style/TextAppearance.App.Heading.H3.Bold
+        </item>
+        <item name="textHeadingH4BoldStyle">@style/Widget.App.TextView.Heading.H4.Bold</item>
+        <item name="textAppearanceHeadingH4Regular">@style/TextAppearance.App.Heading.H4.Regular
+        </item>
+        <item name="textHeadingH4RegularStyle">@style/Widget.App.TextView.Heading.H4.Regular</item>
+        <item name="textAppearanceHeadingH5Bold">@style/TextAppearance.App.Heading.H5.Bold</item>
+        <item name="textHeadingH5BoldStyle">@style/Widget.App.TextView.Heading.H5.Bold</item>
+        <item name="textAppearanceHeadingH5Regular">@style/TextAppearance.App.Heading.H5.Regular
+        </item>
+        <item name="textHeadingH5RegularStyle">@style/Widget.App.TextView.Heading.H5.Regular</item>
+        <item name="textAppearanceHeadingH6Bold">@style/TextAppearance.App.Heading.H6.Bold</item>
+        <item name="textHeadingH6BoldStyle">@style/Widget.App.TextView.Heading.H6.Bold</item>
+        <item name="textHeadingH6RegularStyle">@style/TextAppearance.App.Heading.H6.Regular</item>
+        <!--    Labels   -->
+        <item name="textAppearanceLabelDefaultBold">@style/TextAppearance.App.Label.Default.Bold
+        </item>
+        <item name="textLabelDefaultBoldStyle">@style/Widget.App.TextView.Label.Default.Bold</item>
+        <item name="textAppearanceLabelSmallBold">@style/TextAppearance.App.Label.Small.Bold</item>
+        <item name="textLabelSmallBoldStyle">@style/Widget.App.TextView.Label.Small.Bold</item>
+        <!--    Links   -->
+        <item name="textAppearanceLinkLargeRegular">@style/TextAppearance.App.Link.Large.Regular
+        </item>
+        <item name="buttonLinkLargeRegularStyle">@style/Widget.App.Button.Link.Large.Regular</item>
+        <item name="textAppearanceLinkSmallRegular">@style/TextAppearance.App.Link.Small.Regular
+        </item>
+        <item name="buttonLinkSmallRegularStyle">@style/Widget.App.Button.Link.Small.Regular</item>
+        <item name="textAppearanceLinkStandardRegular">
+            @style/TextAppearance.App.Link.Standard.Regular
+        </item>
+        <item name="buttonLinkStandardRegularStyle">@style/Widget.App.Button.Link.Standard.Regular
+        </item>
+        <item name="textAppearanceLinkXLargeLight">@style/TextAppearance.App.Link.XLarge.Light
+        </item>
+        <item name="buttonLinkXLargeLightStyle">@style/Widget.App.Button.Link.XLarge.Light</item>
+        <item name="textAppearanceLinkXLargeRegular">@style/TextAppearance.App.Link.XLarge.Regular
+        </item>
+        <item name="buttonLinkXLargeRegularStyle">@style/Widget.App.Button.Link.XLarge.Regular
+        </item>
+    </style>
+
+    <!-- Add locale based attributes here e.g. font families -->
+    <style name="Theme.App.Bridge.Locale" parent="Theme.App.Bridge.Typography">
+        <!--        &lt;!&ndash; Locale based theme attributes &ndash;&gt;-->
+        <!--        <item name="android:fontFamily">@font/lato</item>-->
+        <!--        &lt;!&ndash; Support theme attributes &ndash;&gt;-->
+        <!--        <item name="fontFamily">@font/lato</item>-->
+        <!--        &lt;!&ndash; Font theme attributes &ndash;&gt;-->
+        <!--        <item name="fontFamilyLight">@font/lato_light</item>-->
+        <!--        <item name="fontFamilyRegular">@font/lato_regular</item>-->
+        <!--        <item name="fontFamilyMedium">@font/lato_medium</item>-->
+        <!--        <item name="fontFamilyBold">@font/lato_bold</item>-->
+    </style>
+
+    <!-- Add theme mode attributes here e.g. light dark mode colors -->
+    <style name="Theme.App.Mode" parent="Theme.App.Bridge.Locale">
+        <!-- Material theme attributes -->
+        <!--        <item name="colorOnPrimary">@color/white</item>-->
+        <!--        <item name="colorOnSecondary">@color/white</item>-->
+        <!--        <item name="colorError">@color/red</item>-->
+        <!--        <item name="colorOnError">@color/white</item>-->
+        <!--        <item name="colorSurface">@color/white</item>-->
+        <!--        <item name="colorOnSurface">@color/black</item>-->
+        <!--        <item name="android:colorBackground">@color/snow_white</item>-->
+        <!--        <item name="colorOnBackground">@color/black</item>-->
+        <!--        &lt;!&ndash; Base theme attributes &ndash;&gt;-->
+        <!--        <item name="android:textColorPrimary">@color/black</item>-->
+        <!--        <item name="android:textColorPrimaryInverse">@color/white</item>-->
+        <!--        <item name="android:textColorSecondary">@color/color_palette_grey_6</item>-->
+        <!--        <item name="android:textColorLink">?attr/colorPrimary</item>-->
+        <!--        <item name="android:textColorHint">@color/color_palette_grey_6</item>-->
+        <!--        <item name="android:windowBackground">@color/white</item>-->
+        <!--        &lt;!&ndash; Color theme attributes &ndash;&gt;-->
+        <!--        <item name="colorSuccess">@color/green</item>-->
+        <!--        <item name="colorWarning">@color/amber</item>-->
+        <!--        <item name="colorActivated">@color/color_palette_grey_11</item>-->
+        <!--        <item name="colorDeactivated">@color/color_palette_grey_1</item>-->
+        <!--        <item name="colorFocused">?attr/colorQuaternary</item>-->
+        <!--        &lt;!&ndash; Custom theme attributes &ndash;&gt;-->
+        <!--        <item name="listItemDividerColor">@color/color_palette_grey_1</item>-->
+        <!--        <item name="skeletonLoadingShimmerColor">@color/color_palette_grey_6</item>-->
+        <!--        &lt;!&ndash; Theme Mode Colors &ndash;&gt;-->
+        <!--        <item name="colorBackgroundSecondary">@color/smoke_white</item>-->
+        <!--        <item name="colorProgressIndicator">@color/vivid_blue</item>-->
+        <!--        <item name="colorProgressTrack">@color/color_palette_grey_1</item>-->
+        <!--        <item name="colorProgressSecondaryIndicator">?attr/colorPrimary</item>-->
+        <!--        <item name="colorProgressSecondaryTrack">@color/color_palette_grey_13</item>-->
+        <!--        <item name="colorProgressIndicatorInverse">@color/vivid_blue</item>-->
+        <!--        <item name="colorProgressTrackInverse">@color/color_palette_grey_13</item>-->
+        <!--        <item name="colorSwitchThumbNormal">@color/color_palette_grey_8</item>-->
+        <!--        <item name="colorSurfaceAction">@color/color_palette_grey_1</item>-->
+        <!--        <item name="colorSurfaceStroke">@color/color_palette_grey_1</item>-->
+        <!--        <item name="colorSurfaceInverse">@color/white</item>-->
+        <!--        <item name="colorSurfaceInverseStroke">@color/color_palette_grey_1</item>-->
+        <!--        <item name="colorOnSurfaceInverse">@color/black</item>-->
+        <!--        <item name="colorOnSurfaceInverseSecondary">@color/color_palette_grey_11</item>-->
+        <!--        <item name="colorSurfaceSecondary">@color/smoke_white</item>-->
+        <!--        <item name="colorSurfaceSecondaryAction">@color/shade_700</item>-->
+        <!--        <item name="colorSurfaceSecondaryStroke">@color/color_palette_grey_2</item>-->
+        <!--        <item name="colorOnSurfaceSecondary">@color/grey_10</item>-->
+        <!--        &lt;!&ndash; Common Text Colors &ndash;&gt;-->
+        <!--        <item name="colorTextHeading">?attr/colorPrimaryVariant</item>-->
+        <!--        <item name="colorTextSubheading">?attr/colorPrimary</item>-->
+        <!--        <item name="colorTextTitle">@color/color_palette_grey_11</item>-->
+        <!--        <item name="colorTextSubtitle">@color/color_palette_grey_9</item>-->
+        <!--        <item name="colorTextDisable">@color/color_palette_grey_9</item>-->
+        <!--        <item name="colorTextDisableInverse">@color/color_palette_grey_1</item>-->
+        <!--        <item name="colorTextCompletion">@color/lime_green</item>-->
+        <!--        &lt;!&ndash; Common Components Colors &ndash;&gt;-->
+        <!--        <item name="colorBottomNavBackground">?attr/colorPrimary</item>-->
+        <!--        <item name="colorBottomNavTextNormal">?attr/colorOnPrimary</item>-->
+        <!--        <item name="colorBottomNavTextSelected">?attr/colorOnPrimary</item>-->
+        <!--        <item name="colorButtonOutline">?attr/colorPrimary</item>-->
+        <!--        <item name="colorChipEventTypeLearningProfile">@color/light_yellow</item>-->
+        <!--        <item name="colorChipEventTypeSchedule">@color/light_red</item>-->
+        <!--        <item name="colorChipBackgroundNormal">@color/color_palette_grey_13</item>-->
+        <!--        <item name="colorNavigationMenuBackground">@color/smoke_white</item>-->
+        <!--        <item name="colorTabBackgroundNormal">@color/soft_green</item>-->
+        <!--        <item name="colorTextInputBoxStrokeNormal">@color/color_palette_grey_11</item>-->
+        <!--        <item name="colorWebViewBackground">@color/snow_white</item>-->
+        <!--        <item name="overlayBottomNavIconBackgroundNormal">@color/transparent</item>-->
+        <!--        <item name="overlayBottomNavIconBackgroundSelected">?attr/colorOnPrimary</item>-->
+        <!--        <item name="overlayBottomNavIconNormal">?attr/colorOnPrimary</item>-->
+        <!--        <item name="overlayBottomNavIconSelected">@drawable/bg_primary_gradient</item>-->
+        <!--        &lt;!&ndash; Screen/Component Specific Colors (Not Recommended) &ndash;&gt;-->
+        <!--        <item name="colorButtonOutlineNeutral">@color/color_palette_grey_4</item>-->
+        <!--        <item name="colorPasswordStrengthBackground">@color/color_palette_grey_4</item>-->
+        <!--        <item name="colorStepAction">?attr/colorPrimary</item>-->
+        <!--        <item name="colorStepTextDescription">@color/color_palette_grey_9</item>-->
+        <!--        <item name="colorStepTextLabel">@color/color_palette_grey_6</item>-->
+        <!--        <item name="colorTextGreetings">?attr/colorPrimaryVariant</item>-->
+        <!--        <item name="colorBaseDialogBackground">@color/white</item>-->
+    </style>
+
+    <!-- Add common attributes here with highest priority to override base attributes except palette colors -->
+    <style name="Theme.AndroidApplication" parent="Theme.App.Mode" />
+
+</resources>

@@ -1,0 +1,35 @@
+def quickStart(String newPackageName , String rootProjectName){
+        def existingPackageName = "com.test.rahul"
+        def projectBuildFile = file(rootDir.path+"/build.gradle")
+        projectBuildFile.write(projectBuildFile.text.replaceFirst(existingPackageName,newPackageName))
+
+        def existingProjectName = "Android Application"
+        def settingsGradleFile = file(rootDir.path+"/settings.gradle")
+        settingsGradleFile.write(settingsGradleFile.text.replaceFirst(existingProjectName,rootProjectName))
+        def stringResourceFile = file(projectDir.path+"/src/main/res/values/strings.xml")
+        stringResourceFile.write(stringResourceFile.text.replace(existingProjectName,rootProjectName))
+
+        def actualPath = projectDir.path+"/src/main/java/"+existingPackageName.replace(".","/")
+        def newPath = projectDir.path+"/src/main/java/"+newPackageName.replace(".","/")
+        file(actualPath).renameTo(file(newPath))
+        file(actualPath).delete()
+
+        changePackageName(projectDir,existingPackageName,newPackageName)
+}
+
+def changePackageName(File file , String existingPackageName, String newPackageName){
+    if (file.isDirectory()){
+        def dir = file.listFiles()
+        for(int i=0;i<dir.length;i++){
+            changePackageName(dir[i],existingPackageName,newPackageName)
+        }
+    }
+    else {
+        def fileData = file.text.replace(existingPackageName,newPackageName)
+        file.write(fileData)
+    }
+}
+
+ext.quickSetup = [
+    execute : this.&quickStart
+]

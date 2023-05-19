@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    Base theme attributes set to add default attributes for view styles and app colors  -->
+    <declare-styleable name="Theme.App">
+        <attr name="appBarColor" format="color" />
+        <attr name="colorActivated" format="color" />
+        <attr name="colorDeactivated" format="color" />
+        <attr name="colorFocused" format="color" />
+        <attr name="listItemDividerColor" format="color" />
+        <attr name="materialButtonTextStyle" format="reference" />
+        <attr name="materialButtonTextIconStyle" format="reference" />
+        <attr name="materialButtonSecondaryStyle" format="reference" />
+        <attr name="materialButtonOutlinedIconStyle" format="reference" />
+        <attr name="skeletonLoadingShimmerColor" format="color" />
+        <attr name="imageSummerBanner" format="reference" />
+        <attr name="textInputDropdownStyle" format="reference" />
+        <attr name="textInputMaterialThemeOverlay" format="reference" />
+        <attr name="textInputIconTint" format="color" />
+        <attr name="toolbarStyle" format="reference" />
+    </declare-styleable>
+
+    <!--    Base theme attributes set to match with design files color palette  -->
+    <declare-styleable name="Theme.Color">
+        <!-- Generic Colors -->
+        <attr name="colorTransparent" format="color" />
+        <attr name="colorsPasswordStrengthIdentifier" format="color" />
+        <!-- Neutral Colors -->
+        <attr name="grey45" format="color" />
+        <attr name="grey50" format="color" />
+        <attr name="grey75" format="color" />
+        <!-- Theme Mode Colors -->
+        <attr name="colorBackgroundSecondary" format="color" />
+        <attr name="colorProgressIndicator" format="color" />
+        <attr name="colorProgressTrack" format="color" />
+        <attr name="colorProgressSecondaryIndicator" format="color" />
+        <attr name="colorProgressSecondaryTrack" format="color" />
+        <attr name="colorProgressIndicatorInverse" format="color" />
+        <attr name="colorProgressTrackInverse" format="color" />
+        <attr name="colorSwitchThumbNormal" format="color" />
+        <attr name="colorSurfaceAction" format="color" />
+        <attr name="colorSurfaceStroke" format="color" />
+        <attr name="colorSurfaceInverse" format="color" />
+        <attr name="colorSurfaceInverseStroke" format="color" />
+        <attr name="colorOnSurfaceInverse" format="color" />
+        <attr name="colorOnSurfaceInverseSecondary" format="color" />
+        <attr name="colorSurfaceSecondary" format="color" />
+        <attr name="colorSurfaceSecondaryAction" format="color" />
+        <attr name="colorSurfaceSecondaryStroke" format="color" />
+        <attr name="colorOnSurfaceSecondary" format="color" />
+        <!-- Theme Palette Colors -->
+        <attr name="colorPrimaryGradientStart" format="color" />
+        <attr name="colorPrimaryGradientEnd" format="color" />
+        <attr name="colorOnPrimaryGradient" format="color" />
+        <attr name="colorTertiary" format="color" />
+        <attr name="colorOnTertiary" format="color" />
+        <attr name="colorQuaternary" format="color" />
+        <attr name="colorOnQuaternary" format="color" />
+        <!-- Common Actions Colors -->
+        <attr name="colorSuccess" format="color" />
+        <attr name="colorWarning" format="color" />
+        <!-- Common Text Colors -->
+        <attr name="colorTextHeading" format="color" />
+        <attr name="colorTextSubheading" format="color" />
+        <attr name="colorTextDisable" format="color" />
+        <attr name="colorTextDisableInverse" format="color" />
+        <attr name="colorTextTitle" format="color" />
+        <attr name="colorTextSubtitle" format="color" />
+        <attr name="colorTextCompletion" format="color" />
+        <!-- Common Components Colors and Attributes -->
+        <attr name="colorBottomNavBackground" format="color" />
+        <attr name="colorBottomNavTextNormal" format="color" />
+        <attr name="colorBottomNavTextSelected" format="color" />
+        <attr name="colorButtonOutline" format="color" />
+        <attr name="colorChipEventTypeLearningProfile" format="color" />
+        <attr name="colorChipEventTypeSchedule" format="color" />
+        <attr name="colorChipBackgroundNormal" format="color" />
+        <attr name="colorNavigationMenuBackground" format="color|reference" />
+        <attr name="colorTabBackgroundNormal" format="color" />
+        <attr name="colorTextInputBoxStrokeNormal" format="color" />
+        <attr name="colorWebViewBackground" format="color" />
+        <attr name="overlayBottomNavIconBackgroundNormal" format="reference" />
+        <attr name="overlayBottomNavIconBackgroundSelected" format="reference" />
+        <attr name="overlayBottomNavIconNormal" format="reference" />
+        <attr name="overlayBottomNavIconSelected" format="reference" />
+        <!-- Screen/Component Specific Colors (Not Recommended) -->
+        <attr name="colorButtonOutlineNeutral" format="color" />
+        <attr name="colorPasswordStrengthBackground" format="color" />
+        <attr name="colorStepAction" format="color" />
+        <attr name="colorStepTextDescription" format="color" />
+        <attr name="colorStepTextLabel" format="color" />
+        <attr name="colorTextGreetings" format="color" />
+        <attr name="colorBaseDialogBackground" format="color" />
+    </declare-styleable>
+
+    <!--    Base theme attributes set to match with fonts from design files  -->
+    <declare-styleable name="Theme.Font">
+        <!--    Font families   -->
+        <attr name="fontFamilyLight" format="reference" />
+        <attr name="fontFamilyRegular" format="reference" />
+        <attr name="fontFamilyMedium" format="reference" />
+        <attr name="fontFamilyBold" format="reference" />
+        <!--    Body text   -->
+        <attr name="textAppearanceBodyExtraSmallBold" format="reference" />
+        <attr name="textBodyExtraSmallBoldStyle" format="reference" />
+        <attr name="textAppearanceBodyExtraSmallMedium" format="reference" />
+        <attr name="textBodyExtraSmallMediumStyle" format="reference" />
+        <attr name="textAppearanceBodyExtraSmallRegular" format="reference" />
+        <attr name="textBodyExtraSmallRegularStyle" format="reference" />
+        <attr name="textBodyExtraSmallRegularStyleDynamic" format="reference" />
+        <attr name="textAppearanceBodySmallBold" format="reference" />
+        <attr name="textBodySmallBoldStyle" format="reference" />
+        <attr name="textAppearanceBodySmallRegular" format="reference" />
+        <attr name="textBodySmallRegularStyle" format="reference" />
+        <attr name="textAppearanceBodyStandardBold" format="reference" />
+        <attr name="textBodyStandardBoldStyle" format="reference" />
+        <attr name="textAppearanceBodyStandardRegular" format="reference" />
+        <attr name="textBodyStandardRegularStyle" format="reference" />
+        <!--    Headings   -->
+        <attr name="textAppearanceHeadingH1Light" format="reference" />
+        <attr name="textHeadingH1LightStyle" format="reference" />
+        <attr name="textAppearanceHeadingH1Regular" format="reference" />
+        <attr name="textHeadingH1RegularStyle" format="reference" />
+        <attr name="textAppearanceHeadingH1Medium" format="reference" />
+        <attr name="textHeadingH1MediumStyle" format="reference" />
+        <attr name="textAppearanceHeadingH2Bold" format="reference" />
+        <attr name="textHeadingH2BoldStyle" format="reference" />
+        <attr name="textAppearanceHeadingH2Light" format="reference" />
+        <attr name="textHeadingH2LightStyle" format="reference" />
+        <attr name="textAppearanceHeadingH2Medium" format="reference" />
+        <attr name="textHeadingH2MediumStyle" format="reference" />
+        <attr name="textAppearanceHeadingH2Regular" format="reference" />
+        <attr name="textHeadingH2RegularStyle" format="reference" />
+        <attr name="textAppearanceHeadingH3Regular" format="reference" />
+        <attr name="textHeadingH3RegularStyle" format="reference" />
+        <attr name="textAppearanceHeadingH3Light" format="reference" />
+        <attr name="textHeadingH3LightStyle" format="reference" />
+        <attr name="textAppearanceHeadingH3Medium" format="reference" />
+        <attr name="textHeadingH3MediumStyle" format="reference" />
+        <attr name="textAppearanceHeadingH3Bold" format="reference" />
+        <attr name="textHeadingH3BoldStyle" format="reference" />
+        <attr name="textAppearanceHeadingH4Bold" format="reference" />
+        <attr name="textHeadingH4BoldStyle" format="reference" />
+        <attr name="textAppearanceHeadingH4Regular" format="reference" />
+        <attr name="textHeadingH4RegularStyle" format="reference" />
+        <attr name="textAppearanceHeadingH5Bold" format="reference" />
+        <attr name="textHeadingH5BoldStyle" format="reference" />
+        <attr name="textAppearanceHeadingH5Regular" format="reference" />
+        <attr name="textHeadingH5RegularStyle" format="reference" />
+        <attr name="textAppearanceHeadingH6Bold" format="reference" />
+        <attr name="textHeadingH6RegularStyle" format="reference" />
+        <attr name="textHeadingH6BoldStyle" format="reference" />
+        <!--    Labels   -->
+        <attr name="textAppearanceLabelDefaultBold" format="reference" />
+        <attr name="textLabelDefaultBoldStyle" format="reference" />
+        <attr name="textAppearanceLabelSmallBold" format="reference" />
+        <attr name="textLabelSmallBoldStyle" format="reference" />
+        <!--    Links   -->
+        <attr name="textAppearanceLinkLargeRegular" format="reference" />
+        <attr name="buttonLinkLargeRegularStyle" format="reference" />
+        <attr name="textAppearanceLinkSmallRegular" format="reference" />
+        <attr name="buttonLinkSmallRegularStyle" format="reference" />
+        <attr name="textAppearanceLinkStandardRegular" format="reference" />
+        <attr name="buttonLinkStandardRegularStyle" format="reference" />
+        <attr name="textAppearanceLinkXLargeLight" format="reference" />
+        <attr name="buttonLinkXLargeLightStyle" format="reference" />
+        <attr name="textAppearanceLinkXLargeRegular" format="reference" />
+        <attr name="buttonLinkXLargeRegularStyle" format="reference" />
+    </declare-styleable>
+</resources>

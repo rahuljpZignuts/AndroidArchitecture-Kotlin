@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Add theme mode attributes here e.g. light dark mode colors -->
+    <style name="Theme.App.Mode" parent="Theme.App.Bridge.Locale">
+<!--        &lt;!&ndash; Material theme attributes &ndash;&gt;-->
+<!--        <item name="colorOnPrimary">@color/white</item>-->
+<!--        <item name="colorOnSecondary">@color/white</item>-->
+<!--        <item name="colorError">@color/red</item>-->
+<!--        <item name="colorOnError">@color/white</item>-->
+<!--        <item name="colorSurface">@color/black</item>-->
+<!--        <item name="colorOnSurface">@color/white</item>-->
+<!--        <item name="android:colorBackground">@color/dark_blue_grey</item>-->
+<!--        <item name="colorOnBackground">@color/white</item>-->
+<!--        &lt;!&ndash; Base theme attributes &ndash;&gt;-->
+<!--        <item name="android:textColorPrimary">@color/white</item>-->
+<!--        <item name="android:textColorPrimaryInverse">@color/black</item>-->
+<!--        <item name="android:textColorSecondary">@color/color_palette_grey_1</item>-->
+<!--        <item name="android:textColorLink">?attr/colorPrimary</item>-->
+<!--        <item name="android:textColorHint">@color/color_palette_grey_8</item>-->
+<!--        <item name="android:windowBackground">@color/dark_blue_grey</item>-->
+<!--        &lt;!&ndash; Color theme attributes &ndash;&gt;-->
+<!--        <item name="colorSuccess">@color/green</item>-->
+<!--        <item name="colorWarning">@color/amber</item>-->
+<!--        <item name="colorActivated">@color/color_palette_grey_11</item>-->
+<!--        <item name="colorDeactivated">@color/color_palette_grey_9</item>-->
+<!--        <item name="colorFocused">?attr/colorQuaternary</item>-->
+<!--        &lt;!&ndash; Custom theme attributes &ndash;&gt;-->
+<!--        <item name="listItemDividerColor">@color/color_palette_grey_11</item>-->
+<!--        <item name="skeletonLoadingShimmerColor">@color/color_palette_grey_6</item>-->
+<!--        &lt;!&ndash; Theme Mode Colors &ndash;&gt;-->
+<!--        <item name="colorBackgroundSecondary">@color/black</item>-->
+<!--        <item name="colorProgressIndicator">@color/vivid_blue</item>-->
+<!--        <item name="colorProgressTrack">@color/color_palette_grey_13</item>-->
+<!--        <item name="colorProgressSecondaryIndicator">?attr/colorQuaternary</item>-->
+<!--        <item name="colorProgressSecondaryTrack">@color/white_translucent_10</item>-->
+<!--        <item name="colorProgressIndicatorInverse">@color/vivid_blue</item>-->
+<!--        <item name="colorProgressTrackInverse">@color/color_palette_grey_13</item>-->
+<!--        <item name="colorSwitchThumbNormal">@color/color_palette_grey_8</item>-->
+<!--        <item name="colorSurfaceAction">@color/color_palette_grey_1</item>-->
+<!--        <item name="colorSurfaceStroke">@color/color_palette_grey_1</item>-->
+<!--        <item name="colorSurfaceInverse">@color/white</item>-->
+<!--        <item name="colorSurfaceInverseStroke">@color/color_palette_grey_1</item>-->
+<!--        <item name="colorOnSurfaceInverse">@color/black</item>-->
+<!--        <item name="colorOnSurfaceInverseSecondary">@color/color_palette_grey_11</item>-->
+<!--        <item name="colorSurfaceSecondary">@color/black</item>-->
+<!--        <item name="colorSurfaceSecondaryAction">@color/smoke_white</item>-->
+<!--        <item name="colorSurfaceSecondaryStroke">@color/color_palette_grey_2</item>-->
+<!--        <item name="colorOnSurfaceSecondary">@color/color_palette_grey_1</item>-->
+<!--        &lt;!&ndash; Common Text Colors &ndash;&gt;-->
+<!--        <item name="colorTextHeading">?attr/colorQuaternary</item>-->
+<!--        <item name="colorTextSubheading">?attr/colorPrimary</item>-->
+<!--        <item name="colorTextTitle">@color/white</item>-->
+<!--        <item name="colorTextSubtitle">@color/color_palette_grey_1</item>-->
+<!--        <item name="colorTextDisable">@color/color_palette_grey_5</item>-->
+<!--        <item name="colorTextDisableInverse">@color/color_palette_grey_9</item>-->
+<!--        <item name="colorTextCompletion">@color/lime_green</item>-->
+<!--        &lt;!&ndash; Common Components Colors &ndash;&gt;-->
+<!--        <item name="colorBottomNavBackground">@color/white</item>-->
+<!--        <item name="colorBottomNavTextNormal">@color/color_palette_grey_9</item>-->
+<!--        <item name="colorBottomNavTextSelected">?attr/colorPrimaryVariant</item>-->
+<!--        <item name="colorButtonOutline">@color/white</item>-->
+<!--        <item name="colorChipEventTypeLearningProfile">@color/light_yellow</item>-->
+<!--        <item name="colorChipEventTypeSchedule">@color/light_red</item>-->
+<!--        <item name="colorChipBackgroundNormal">@color/pale_blue</item>-->
+<!--        <item name="colorNavigationMenuBackground">@color/grey_20</item>-->
+<!--        <item name="colorTabBackgroundNormal">@color/white_translucent_25</item>-->
+<!--        <item name="colorTextInputBoxStrokeNormal">@color/color_palette_grey_2</item>-->
+<!--        <item name="colorWebViewBackground">@color/dark_blue_black</item>-->
+<!--        <item name="overlayBottomNavIconBackgroundNormal">@color/transparent</item>-->
+<!--        <item name="overlayBottomNavIconBackgroundSelected">@drawable/bg_primary_gradient</item>-->
+<!--        <item name="overlayBottomNavIconNormal">@color/color_palette_grey_9</item>-->
+<!--        <item name="overlayBottomNavIconSelected">?attr/colorOnPrimaryGradient</item>-->
+<!--        &lt;!&ndash; Screen/Component Specific Colors (Not Recommended) &ndash;&gt;-->
+<!--        <item name="colorButtonOutlineNeutral">@color/color_palette_grey_4</item>-->
+<!--        <item name="colorPasswordStrengthBackground">@color/color_palette_grey_4</item>-->
+<!--        <item name="colorStepAction">@color/white</item>-->
+<!--        <item name="colorStepTextDescription">@color/color_palette_grey_4</item>-->
+<!--        <item name="colorStepTextLabel">@color/color_palette_grey_1</item>-->
+<!--        <item name="colorTextGreetings">@color/color_palette_grey_1</item>-->
+<!--        <item name="colorBaseDialogBackground">@color/grey_20</item>-->
+    </style>
+</resources>

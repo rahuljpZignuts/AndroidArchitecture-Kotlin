@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.App.Button.Link" parent="Widget.MaterialComponents.Button.TextButton" />
+
+    <style name="Widget.App.Button.Link.Large">
+        <item name="android:textAppearance">@style/TextAppearance.App.Link.Large</item>
+    </style>
+
+    <style name="Widget.App.Button.Link.Small">
+        <item name="android:textAppearance">@style/TextAppearance.App.Link.Small</item>
+    </style>
+
+    <style name="Widget.App.Button.Link.Standard">
+        <item name="android:textAppearance">@style/TextAppearance.App.Link.Standard</item>
+    </style>
+
+    <style name="Widget.App.Button.Link.XLarge">
+        <item name="android:textAppearance">@style/TextAppearance.App.Link.XLarge</item>
+    </style>
+
+    <style name="Widget.App.Button.Link.Large.Regular">
+        <item name="android:fontFamily">?attr/fontFamilyRegular</item>
+        <item name="android:textAppearance">?attr/textAppearanceLinkLargeRegular</item>
+        <item name="fontFamily">?attr/fontFamilyRegular</item>
+        <item name="fontWeight">400</item>
+    </style>
+
+    <style name="Widget.App.Button.Link.Small.Regular">
+        <item name="android:fontFamily">?attr/fontFamilyRegular</item>
+        <item name="android:textAppearance">?attr/textAppearanceLinkSmallRegular</item>
+        <item name="fontFamily">?attr/fontFamilyRegular</item>
+        <item name="fontWeight">400</item>
+    </style>
+
+    <style name="Widget.App.Button.Link.Standard.Regular">
+        <item name="android:fontFamily">?attr/fontFamilyRegular</item>
+        <item name="android:textAppearance">?attr/textAppearanceLinkStandardRegular</item>
+        <item name="fontFamily">?attr/fontFamilyRegular</item>
+        <item name="fontWeight">400</item>
+    </style>
+
+    <style name="Widget.App.Button.Link.XLarge.Light">
+        <item name="android:fontFamily">?attr/fontFamilyLight</item>
+        <item name="android:textAppearance">?attr/textAppearanceLinkXLargeLight</item>
+        <item name="fontFamily">?attr/fontFamilyLight</item>
+        <item name="fontWeight">300</item>
+    </style>
+
+    <style name="Widget.App.Button.Link.XLarge.Regular">
+        <item name="android:fontFamily">?attr/fontFamilyRegular</item>
+        <item name="android:textAppearance">?attr/textAppearanceLinkXLargeRegular</item>
+        <item name="fontFamily">?attr/fontFamilyRegular</item>
+        <item name="fontWeight">400</item>
+    </style>
+
+    <style name="Widget.App.Button.OutlinedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:fontFamily">?attr/fontFamilyBold</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:textColor">?attr/colorButtonOutline</item>
+        <item name="android:textAppearance">?attr/textAppearanceHeadingH6Bold</item>
+        <item name="fontFamily">?attr/fontFamilyBold</item>
+        <item name="fontWeight">700</item>
+        <item name="strokeColor">?attr/colorButtonOutline</item>
+    </style>
+
+    <style name="Widget.App.Button.Secondary" parent="Widget.MaterialComponents.Button">
+        <item name="android:fontFamily">?attr/fontFamilyRegular</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="backgroundTint">?attr/colorQuaternary</item>
+        <item name="android:textAppearance">?attr/textAppearanceBodyStandardRegular</item>
+        <item name="fontFamily">?attr/fontFamilyRegular</item>
+        <item name="fontWeight">400</item>
+    </style>
+
+    <style name="Widget.App.Button.OutlinedButton.Icon" parent="Widget.MaterialComponents.Button.OutlinedButton.Icon">
+        <item name="android:fontFamily">?attr/fontFamilyRegular</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:textAppearance">?attr/textAppearanceBodyStandardRegular</item>
+        <item name="fontFamily">?attr/fontFamilyRegular</item>
+        <item name="fontWeight">400</item>
+        <item name="strokeColor">?attr/colorButtonOutlineNeutral</item>
+    </style>
+</resources>

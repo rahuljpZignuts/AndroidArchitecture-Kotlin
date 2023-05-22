@@ -23,11 +23,11 @@ abstract class PredicateEventObserver<T>(
      *
      * @param data The new data delivered
      */
-    abstract fun onChangeReceived(data: T?)
+    abstract fun onChangeReceived(data: T)
 
     private val pending = AtomicBoolean(false)
 
-    override fun onChanged(value: T?) {
+    override fun onChanged(value: T) {
         val emit: Boolean = predicate(value)
         if (emit && pending.compareAndSet(false, true)) {
             removeObserver()

@@ -9,8 +9,8 @@ import com.rahul.kotlin.architecture.lifecycle.observable.UIEventType
  * UIEvent observer boilerplate for observing UI events
  */
 class UIEventObserver(private val listener: UIEventListener) : Observer<UIEvent> {
-    override fun onChanged(event: UIEvent?) {
-        when (val type = event?.getEvent()) {
+    override fun onChanged(event: UIEvent) {
+        when (val type = event.getEvent()) {
             is UIEventType.Alert -> listener.onShowAlertEventReceived(type, event.extras)
             is UIEventType.Navigate -> listener.onNavigationEventReceived(type, event.extras)
             is UIEventType.Toast -> listener.onShowToastEventReceived(type, event.extras)

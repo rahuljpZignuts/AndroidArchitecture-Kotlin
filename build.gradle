@@ -24,8 +24,8 @@ buildscript {
             compileSdkVersion       : 33,
             minSdkVersion           : 21,
             targetSdkVersion        : 33,
-            compileOptionsVersion   : JavaVersion.VERSION_1_8,
-            jvmVersion              : JavaVersion.VERSION_1_8,
+            compileOptionsVersion   : JavaVersion.VERSION_11,
+            jvmVersion              : JavaVersion.VERSION_11,
     ]
     ext.buildConfig = [
             defaultLanguage         : "DEFAULT_LANGUAGE",
@@ -34,36 +34,36 @@ buildscript {
     ]
     ext.plugin = [
             "crashlytics"           : "2.9.2",
-            "gradle"                : '7.4.1',
+            "gradle"                : '8.0.1',
             "hilt"                  : "2.44",
-            "kotlin"                : "1.8.0",
+            "kotlin"                : "1.8.21",
             "navigation"            : "2.5.3",
             "protobuf"              : "3.21.7",
             "r8"                    : "3.3.75",
             "versionMatcher"        : "1.2.4",
     ]
     ext.versions = [
-            "activity"              : "1.6.1",
+            "activity"              : "1.7.1",
             "appCompat"             : "1.6.1",
             "collection"            : "1.2.0",
             "constraintLayout"      : "2.1.4",
-            "core"                  : "1.9.0",
+            "core"                  : "1.10.1",
             "coroutines"            : "1.6.4",
             "datastore"             : "1.0.0",
             "hilt"                  : "2.44",
-            "fragment"              : "1.5.5",
+            "fragment"              : "1.5.7",
             "glide"                 : "4.14.2",
-            "kotlin"                : "1.7.20",
-            "lifecycle"             : "2.5.1",
+            "kotlin"                : "1.8.21",
+            "lifecycle"             : "2.6.1",
             "logging"               : "5.0.0-alpha.10",
-            "material"              : "1.8.0",
+            "material"              : "1.9.0",
             "moshi"                 : "1.14.0",
             "navigation"            : "2.5.3",
             "navigationFragment"    : "1.0.0",
             "paging"                : "3.1.1",
             "protobuf"              : "3.16.3",
             "retrofit"              : "2.9.0",
-            "room"                  : "2.5.0",
+            "room"                  : "2.5.1",
             "skeletonLayout"        : "4.0.0",
             "swipeRefreshLayout"    : "1.1.0",
             "timber"                : "5.0.1",
@@ -88,4 +88,8 @@ buildscript {
         classpath "com.google.firebase:firebase-crashlytics-gradle:${plugin.crashlytics}"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${plugin.kotlin}"
     }
+}
+
+plugins {
+    id "org.jetbrains.kotlin.jvm" version "1.8.21" apply false
 }

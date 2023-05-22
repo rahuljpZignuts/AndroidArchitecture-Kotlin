@@ -4,7 +4,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
-import androidx.lifecycle.Transformations
+import androidx.lifecycle.map
 import com.rahul.kotlin.architecture.data.enums.RequestState
 import com.rahul.kotlin.architecture.data.enums.isLoading
 import com.rahul.kotlin.architecture.lifecycle.observable.UIEvent
@@ -27,7 +27,7 @@ fun <Owner> LiveData<UIEvent>.observeActivity(owner: Owner) where Owner : Fragme
 
 fun <T> LiveData<T>.observeOnce(observer: Observer<T>, owner: LifecycleOwner? = null) {
     val listener = object : SingleEventObserver<T>(source = this) {
-        override fun onChangeReceived(data: T?) {
+        override fun onChangeReceived(data: T) {
             observer.onChanged(data)
         }
     }
@@ -44,7 +44,7 @@ fun <T> LiveData<T>.observeOnly(
     predicate: (T?) -> Boolean,
 ) {
     val listener = object : PredicateEventObserver<T>(source = this, predicate = predicate) {
-        override fun onChangeReceived(data: T?) {
+        override fun onChangeReceived(data: T) {
             observer.onChanged(data)
         }
     }
@@ -55,10 +55,10 @@ fun <T> LiveData<T>.observeOnly(
     }
 }
 
-fun LiveData<Boolean>.transformToRequestState() = Transformations.map(this) {
-    return@map if (it == true) RequestState.IN_PROGRESS else RequestState.SUCCESS
+fun LiveData<Boolean>.transformToRequestState() = map {
+    return@map if (it) RequestState.IN_PROGRESS else RequestState.SUCCESS
 }
 
-fun LiveData<RequestState>.transformFromRequestState() = Transformations.map(this) {
+fun LiveData<RequestState>.transformFromRequestState() = map {
     return@map it.isLoading()
 }

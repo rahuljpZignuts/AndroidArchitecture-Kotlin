@@ -5,7 +5,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'kotlin-parcelize'
-    id 'com.google.protobuf' version "0.8.17"
+    id 'com.google.protobuf' version '0.9.0'
     id 'dagger.hilt.android.plugin'
     id 'androidx.navigation.safeargs.kotlin'
     id 'com.google.android.gms.strict-version-matcher-plugin'
@@ -106,7 +106,7 @@ android {
             versionNameSuffix ".${application.versionCode}-staging"
             def baseUrl = "api.publicapis.org"
             buildConfigField('String', buildConfig.defaultLanguage, buildConfigString("en"))
-            buildConfigField('String', buildConfig.baseUrl, buildConfigString(createBaseURL(baseUrl,true)))
+            buildConfigField('String', buildConfig.baseUrl, buildConfigString(createBaseURL(baseUrl, true)))
             manifestPlaceholders.put(buildVariables.manifestPlaceholder.usesCleartextTraffic, false)
         }
         dev {
@@ -115,7 +115,7 @@ android {
             versionNameSuffix ".${application.versionCode}-dev"
             def baseUrl = "api.publicapis.org"
             buildConfigField('String', buildConfig.defaultLanguage, buildConfigString("en"))
-            buildConfigField('String', buildConfig.baseUrl, buildConfigString(createBaseURL(baseUrl,true)))
+            buildConfigField('String', buildConfig.baseUrl, buildConfigString(createBaseURL(baseUrl, true)))
             manifestPlaceholders.put(buildVariables.manifestPlaceholder.usesCleartextTraffic, false)
         }
         local {
@@ -124,14 +124,14 @@ android {
             versionNameSuffix ".${application.versionCode}-local"
             def baseUrl = "api.publicapis.org"
             buildConfigField('String', buildConfig.defaultLanguage, buildConfigString("en"))
-            buildConfigField('String', buildConfig.baseUrl, buildConfigString(createBaseURL(baseUrl,true)))
+            buildConfigField('String', buildConfig.baseUrl, buildConfigString(createBaseURL(baseUrl, true)))
             manifestPlaceholders.put(buildVariables.manifestPlaceholder.usesCleartextTraffic, true)
         }
         production {
             dimension "environment"
             def baseUrl = "api.publicapis.org"
             buildConfigField('String', buildConfig.defaultLanguage, buildConfigString("en"))
-            buildConfigField('String', buildConfig.baseUrl, buildConfigString(createBaseURL(baseUrl,true)))
+            buildConfigField('String', buildConfig.baseUrl, buildConfigString(createBaseURL(baseUrl, true)))
             manifestPlaceholders.put(buildVariables.manifestPlaceholder.usesCleartextTraffic, false)
         }
     }
@@ -141,12 +141,12 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility buildOptions.compileOptionsVersion
-        targetCompatibility buildOptions.jvmVersion
+        sourceCompatibility  buildOptions.compileOptionsVersion
+        targetCompatibility  buildOptions.jvmVersion
     }
 
-    kotlinOptions {
-        jvmTarget = '1.8'
+    kotlin {
+        jvmToolchain(11)
     }
 
     def variantFilterSkipMap = [
@@ -242,8 +242,8 @@ kapt {
 
 apply from: "quick_start.gradle"
 
-task QuickStartProject{
+task QuickStartProject {
     def newPackageName = "com.rahul.kotlin.architecture"
     def rootProjectName = "Android Kotlin Architecture"
-    quickSetup.execute(newPackageName,rootProjectName)
+    quickSetup.execute(newPackageName, rootProjectName)
 }

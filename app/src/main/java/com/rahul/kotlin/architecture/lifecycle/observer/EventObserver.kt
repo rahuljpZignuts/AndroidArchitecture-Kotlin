@@ -8,7 +8,7 @@ import com.rahul.kotlin.architecture.lifecycle.observable.Event
  * which is only called when the event has not been handled before once at least
  */
 class EventObserver<T>(private val consumer: (content: T) -> Unit) : Observer<Event<T?>> {
-    override fun onChanged(event: Event<T?>?) {
-        event?.getEvent()?.let { content -> consumer(content) }
+    override fun onChanged(event: Event<T?>) {
+        event.getEvent()?.let { content -> consumer(content) }
     }
 }

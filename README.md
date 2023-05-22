@@ -83,7 +83,7 @@ First off, it requires latest stable version of [Android Studio](https://develop
 The project requires build tools version `33.0.0` and compile tools from Android SDK `33` to build this project. Complete requirements can be seen in project level [`build.gradle`](build.gradle#L23). If one faces error compiling this project, please install **Android SDK Platform 33 (Android 13)** manually from `Preferences` -> `Appearance & Behavior` -> `System Settings` -> `Android SDK`
 
 #### Gradle Plugin
-The project requires Android [`gradle plugin`](build.gradle#L37) version `7.4.1` and [`gradle`](gradle/wrapper/gradle-wrapper.properties#L3) version `7.5`.
+The project requires Android [`gradle plugin`](build.gradle#L37) version `8.0.1` and [`gradle`](gradle/wrapper/gradle-wrapper.properties#L3) version `8.0`.
 
 
 ## Quick Start Project

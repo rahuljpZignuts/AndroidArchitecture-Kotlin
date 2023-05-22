@@ -11,7 +11,7 @@ import androidx.core.view.isVisible
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.Transformations
+import androidx.lifecycle.distinctUntilChanged
 import com.rahul.kotlin.architecture.R
 import com.rahul.kotlin.architecture.data.enums.RequestState
 import com.rahul.kotlin.architecture.databinding.ViewEmptyStateBinding
@@ -202,7 +202,7 @@ class StateLayout(context: Context, attrs: AttributeSet) : FrameLayout(context, 
         lifecycleOwner: LifecycleOwner,
         stateObservable: LiveData<RequestState>,
         transformer: (RequestState) -> State = defaultStateMapper,
-    ) = Transformations.distinctUntilChanged(stateObservable).observe(
+    ) = stateObservable.distinctUntilChanged().observe(
         lifecycleOwner
     ) { state -> setStateInternal(transformer(state), locked = false) }
 

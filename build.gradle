@@ -6,6 +6,19 @@ buildscript {
             versionCode             : 1,
             versionName             : "1.0.0",
     ]
+    ext.releaseSettings = [
+            enableAndroidOptimize   : true,
+            minifyEnabled           : true,
+            shrinkResources         : true,
+    ]
+    ext.buildVariables = [
+            manifestPlaceholder: [
+                    crashCollectionEnabled  : "crashCollectionEnabled",
+                    lmsHost                 : "lmsHost",
+                    platformHost            : "platformHost",
+                    usesCleartextTraffic    : "usesCleartextTraffic",
+            ],
+    ]
     ext.buildOptions = [
             buildToolsVersion       : "33.0.0",
             compileSdkVersion       : 33,

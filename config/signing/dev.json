@@ -1,0 +1,8 @@
+{
+  "android": {
+    "storeFile": "dev.jks",
+    "storePassword": "Dev@123",
+    "keyAlias": "dev-rahul",
+    "keyPassword": "RahulDev@123"
+  }
+}

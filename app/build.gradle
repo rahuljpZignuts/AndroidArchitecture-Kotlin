@@ -1,3 +1,5 @@
+import groovy.json.JsonSlurper
+
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
@@ -23,6 +25,7 @@ android {
     namespace application.id
     compileSdkVersion buildOptions.compileSdkVersion
     buildToolsVersion buildOptions.buildToolsVersion
+    flavorDimensions "environment"
 
     defaultConfig {
         applicationId application.id
@@ -31,22 +34,108 @@ android {
         versionCode application.versionCode
         versionName application.versionName
 
-        def baseUrl = "api.publicapis.org"
-        buildConfigField('String', buildConfig.defaultLanguage, buildConfigString("en"))
-        buildConfigField('String', buildConfig.packageName, buildConfigString(applicationId))
-        buildConfigField('String', buildConfig.baseUrl, buildConfigString(createBaseURL(baseUrl,true)))
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    buildTypes {
-        debug{}
-
+    signingConfigs {
+        def signingConfigPath = "../config/signing/"
+        debug {
+            def credsFilePath = file(signingConfigPath.concat("dev.json"))
+            def credsFile = credsFilePath.getText('UTF-8')
+            def json = new JsonSlurper().parseText(credsFile)
+            storeFile file(signingConfigPath.concat(json.android.storeFile))
+            storePassword json.android.storePassword
+            keyAlias json.android.keyAlias
+            keyPassword json.android.keyPassword
+        }
         release {
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            def credsFilePath = file(signingConfigPath.concat("dev.json"))
+            if (credsFilePath.canRead()) {
+                def credsFile = credsFilePath.getText('UTF-8')
+                def json = new JsonSlurper().parseText(credsFile)
+                storeFile file(signingConfigPath.concat(json.android.storeFile))
+                storePassword json.android.storePassword
+                keyAlias json.android.keyAlias
+                keyPassword json.android.keyPassword
+            }
         }
     }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+            debuggable true
+            minifyEnabled false
+            shrinkResources false
+            manifestPlaceholders.put(buildVariables.manifestPlaceholder.crashCollectionEnabled, false)
+        }
+        internal {
+            signingConfig signingConfigs.debug
+            debuggable false
+            minifyEnabled releaseSettings.minifyEnabled
+            shrinkResources releaseSettings.shrinkResources
+            if (releaseSettings.enableAndroidOptimize) {
+                proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules-internal.pro'
+            }
+            matchingFallbacks = ['release', 'debug']
+            manifestPlaceholders.put(buildVariables.manifestPlaceholder.crashCollectionEnabled, true)
+            firebaseCrashlytics {
+                mappingFileUploadEnabled false
+            }
+        }
+        release {
+            signingConfig signingConfigs.release
+            debuggable false
+            minifyEnabled releaseSettings.minifyEnabled
+            shrinkResources releaseSettings.shrinkResources
+            if (releaseSettings.enableAndroidOptimize) {
+                proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules-release.pro'
+            }
+            matchingFallbacks = ['staging', 'debug']
+            manifestPlaceholders.put(buildVariables.manifestPlaceholder.crashCollectionEnabled, true)
+            firebaseCrashlytics {
+                mappingFileUploadEnabled true
+            }
+        }
+    }
+
+    productFlavors {
+        staging {
+            dimension "environment"
+            applicationIdSuffix ".android.staging"
+            versionNameSuffix ".${application.versionCode}-staging"
+            def baseUrl = "api.publicapis.org"
+            buildConfigField('String', buildConfig.defaultLanguage, buildConfigString("en"))
+            buildConfigField('String', buildConfig.baseUrl, buildConfigString(createBaseURL(baseUrl,true)))
+            manifestPlaceholders.put(buildVariables.manifestPlaceholder.usesCleartextTraffic, false)
+        }
+        dev {
+            dimension "environment"
+            applicationIdSuffix ".android.dev"
+            versionNameSuffix ".${application.versionCode}-dev"
+            def baseUrl = "api.publicapis.org"
+            buildConfigField('String', buildConfig.defaultLanguage, buildConfigString("en"))
+            buildConfigField('String', buildConfig.baseUrl, buildConfigString(createBaseURL(baseUrl,true)))
+            manifestPlaceholders.put(buildVariables.manifestPlaceholder.usesCleartextTraffic, false)
+        }
+        local {
+            dimension "environment"
+            applicationIdSuffix ".android.dev"
+            versionNameSuffix ".${application.versionCode}-local"
+            def baseUrl = "api.publicapis.org"
+            buildConfigField('String', buildConfig.defaultLanguage, buildConfigString("en"))
+            buildConfigField('String', buildConfig.baseUrl, buildConfigString(createBaseURL(baseUrl,true)))
+            manifestPlaceholders.put(buildVariables.manifestPlaceholder.usesCleartextTraffic, true)
+        }
+        production {
+            dimension "environment"
+            def baseUrl = "api.publicapis.org"
+            buildConfigField('String', buildConfig.defaultLanguage, buildConfigString("en"))
+            buildConfigField('String', buildConfig.baseUrl, buildConfigString(createBaseURL(baseUrl,true)))
+            manifestPlaceholders.put(buildVariables.manifestPlaceholder.usesCleartextTraffic, false)
+        }
+    }
+
     buildFeatures {
         dataBinding true
     }
@@ -58,6 +147,26 @@ android {
 
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+
+    def variantFilterSkipMap = [
+            stagingRelease    : true,
+            devRelease        : true,
+            localDebug        : true,
+            localInternal     : true,
+            localRelease      : true,
+            productionDebug   : true,
+            productionInternal: true,
+    ]
+
+    variantFilter { variant ->
+        setIgnore(variantFilterSkipMap[variant.name] ?: false)
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "App-V${application.versionName}.${application.versionCode}-${variant.name.capitalize()}.apk"
+        }
     }
 }
 

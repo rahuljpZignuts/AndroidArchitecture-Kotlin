@@ -19,9 +19,6 @@ object Config {
     // Application ID.
     const val applicationId: String = BuildConfig.APPLICATION_ID
 
-    // Package Name.
-    const val packageName: String = BuildConfig.PACKAGE_NAME
-
     // Base URL for calling LMS services
     const val baseUrl: String = BuildConfig.BASE_URL
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Add base theme attributes here e.g. parent theme based attributes -->
-    <style name="Theme.App.Base" parent="Theme.MaterialComponents.DayNight.NoActionBar" />
+    <style name="Theme.App.Base" parent="Theme.Material3.DayNight.NoActionBar" />
 
     <!-- Add api level attributes here e.g. animations and window configurations -->
     <style name="Theme.App.Bridge.OS" parent="Theme.App.Base">
@@ -121,95 +121,50 @@
 
     <!-- Add locale based attributes here e.g. font families -->
     <style name="Theme.App.Bridge.Locale" parent="Theme.App.Bridge.Typography">
-        <!--        &lt;!&ndash; Locale based theme attributes &ndash;&gt;-->
-        <!--        <item name="android:fontFamily">@font/lato</item>-->
-        <!--        &lt;!&ndash; Support theme attributes &ndash;&gt;-->
-        <!--        <item name="fontFamily">@font/lato</item>-->
-        <!--        &lt;!&ndash; Font theme attributes &ndash;&gt;-->
-        <!--        <item name="fontFamilyLight">@font/lato_light</item>-->
-        <!--        <item name="fontFamilyRegular">@font/lato_regular</item>-->
-        <!--        <item name="fontFamilyMedium">@font/lato_medium</item>-->
-        <!--        <item name="fontFamilyBold">@font/lato_bold</item>-->
+        <!-- Locale based theme attributes -->
+        <item name="android:fontFamily">@font/poppins</item>
+        <!-- Support theme attributes -->
+        <item name="fontFamily">@font/poppins</item>
+        <!-- Font theme attributes -->
+        <item name="fontFamilyLight">@font/poppins_light</item>
+        <item name="fontFamilyRegular">@font/poppins_regular</item>
+        <item name="fontFamilyMedium">@font/poppins_medium</item>
+        <item name="fontFamilyBold">@font/poppins_bold</item>
     </style>
 
     <!-- Add theme mode attributes here e.g. light dark mode colors -->
     <style name="Theme.App.Mode" parent="Theme.App.Bridge.Locale">
+        <item name="android:windowLightStatusBar">true</item>
         <!-- Material theme attributes -->
-        <!--        <item name="colorOnPrimary">@color/white</item>-->
-        <!--        <item name="colorOnSecondary">@color/white</item>-->
-        <!--        <item name="colorError">@color/red</item>-->
-        <!--        <item name="colorOnError">@color/white</item>-->
-        <!--        <item name="colorSurface">@color/white</item>-->
-        <!--        <item name="colorOnSurface">@color/black</item>-->
-        <!--        <item name="android:colorBackground">@color/snow_white</item>-->
-        <!--        <item name="colorOnBackground">@color/black</item>-->
-        <!--        &lt;!&ndash; Base theme attributes &ndash;&gt;-->
-        <!--        <item name="android:textColorPrimary">@color/black</item>-->
-        <!--        <item name="android:textColorPrimaryInverse">@color/white</item>-->
-        <!--        <item name="android:textColorSecondary">@color/color_palette_grey_6</item>-->
-        <!--        <item name="android:textColorLink">?attr/colorPrimary</item>-->
-        <!--        <item name="android:textColorHint">@color/color_palette_grey_6</item>-->
-        <!--        <item name="android:windowBackground">@color/white</item>-->
-        <!--        &lt;!&ndash; Color theme attributes &ndash;&gt;-->
-        <!--        <item name="colorSuccess">@color/green</item>-->
-        <!--        <item name="colorWarning">@color/amber</item>-->
-        <!--        <item name="colorActivated">@color/color_palette_grey_11</item>-->
-        <!--        <item name="colorDeactivated">@color/color_palette_grey_1</item>-->
-        <!--        <item name="colorFocused">?attr/colorQuaternary</item>-->
-        <!--        &lt;!&ndash; Custom theme attributes &ndash;&gt;-->
-        <!--        <item name="listItemDividerColor">@color/color_palette_grey_1</item>-->
-        <!--        <item name="skeletonLoadingShimmerColor">@color/color_palette_grey_6</item>-->
-        <!--        &lt;!&ndash; Theme Mode Colors &ndash;&gt;-->
-        <!--        <item name="colorBackgroundSecondary">@color/smoke_white</item>-->
-        <!--        <item name="colorProgressIndicator">@color/vivid_blue</item>-->
-        <!--        <item name="colorProgressTrack">@color/color_palette_grey_1</item>-->
-        <!--        <item name="colorProgressSecondaryIndicator">?attr/colorPrimary</item>-->
-        <!--        <item name="colorProgressSecondaryTrack">@color/color_palette_grey_13</item>-->
-        <!--        <item name="colorProgressIndicatorInverse">@color/vivid_blue</item>-->
-        <!--        <item name="colorProgressTrackInverse">@color/color_palette_grey_13</item>-->
-        <!--        <item name="colorSwitchThumbNormal">@color/color_palette_grey_8</item>-->
-        <!--        <item name="colorSurfaceAction">@color/color_palette_grey_1</item>-->
-        <!--        <item name="colorSurfaceStroke">@color/color_palette_grey_1</item>-->
-        <!--        <item name="colorSurfaceInverse">@color/white</item>-->
-        <!--        <item name="colorSurfaceInverseStroke">@color/color_palette_grey_1</item>-->
-        <!--        <item name="colorOnSurfaceInverse">@color/black</item>-->
-        <!--        <item name="colorOnSurfaceInverseSecondary">@color/color_palette_grey_11</item>-->
-        <!--        <item name="colorSurfaceSecondary">@color/smoke_white</item>-->
-        <!--        <item name="colorSurfaceSecondaryAction">@color/shade_700</item>-->
-        <!--        <item name="colorSurfaceSecondaryStroke">@color/color_palette_grey_2</item>-->
-        <!--        <item name="colorOnSurfaceSecondary">@color/grey_10</item>-->
-        <!--        &lt;!&ndash; Common Text Colors &ndash;&gt;-->
-        <!--        <item name="colorTextHeading">?attr/colorPrimaryVariant</item>-->
-        <!--        <item name="colorTextSubheading">?attr/colorPrimary</item>-->
-        <!--        <item name="colorTextTitle">@color/color_palette_grey_11</item>-->
-        <!--        <item name="colorTextSubtitle">@color/color_palette_grey_9</item>-->
-        <!--        <item name="colorTextDisable">@color/color_palette_grey_9</item>-->
-        <!--        <item name="colorTextDisableInverse">@color/color_palette_grey_1</item>-->
-        <!--        <item name="colorTextCompletion">@color/lime_green</item>-->
-        <!--        &lt;!&ndash; Common Components Colors &ndash;&gt;-->
-        <!--        <item name="colorBottomNavBackground">?attr/colorPrimary</item>-->
-        <!--        <item name="colorBottomNavTextNormal">?attr/colorOnPrimary</item>-->
-        <!--        <item name="colorBottomNavTextSelected">?attr/colorOnPrimary</item>-->
-        <!--        <item name="colorButtonOutline">?attr/colorPrimary</item>-->
-        <!--        <item name="colorChipEventTypeLearningProfile">@color/light_yellow</item>-->
-        <!--        <item name="colorChipEventTypeSchedule">@color/light_red</item>-->
-        <!--        <item name="colorChipBackgroundNormal">@color/color_palette_grey_13</item>-->
-        <!--        <item name="colorNavigationMenuBackground">@color/smoke_white</item>-->
-        <!--        <item name="colorTabBackgroundNormal">@color/soft_green</item>-->
-        <!--        <item name="colorTextInputBoxStrokeNormal">@color/color_palette_grey_11</item>-->
-        <!--        <item name="colorWebViewBackground">@color/snow_white</item>-->
-        <!--        <item name="overlayBottomNavIconBackgroundNormal">@color/transparent</item>-->
-        <!--        <item name="overlayBottomNavIconBackgroundSelected">?attr/colorOnPrimary</item>-->
-        <!--        <item name="overlayBottomNavIconNormal">?attr/colorOnPrimary</item>-->
-        <!--        <item name="overlayBottomNavIconSelected">@drawable/bg_primary_gradient</item>-->
-        <!--        &lt;!&ndash; Screen/Component Specific Colors (Not Recommended) &ndash;&gt;-->
-        <!--        <item name="colorButtonOutlineNeutral">@color/color_palette_grey_4</item>-->
-        <!--        <item name="colorPasswordStrengthBackground">@color/color_palette_grey_4</item>-->
-        <!--        <item name="colorStepAction">?attr/colorPrimary</item>-->
-        <!--        <item name="colorStepTextDescription">@color/color_palette_grey_9</item>-->
-        <!--        <item name="colorStepTextLabel">@color/color_palette_grey_6</item>-->
-        <!--        <item name="colorTextGreetings">?attr/colorPrimaryVariant</item>-->
-        <!--        <item name="colorBaseDialogBackground">@color/white</item>-->
+        <item name="colorPrimary">@color/md_theme_light_primary</item>
+        <item name="colorPrimaryDark">@color/md_theme_light_background</item>
+        <item name="colorOnPrimary">@color/md_theme_light_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/md_theme_light_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/md_theme_light_onPrimaryContainer</item>
+        <item name="colorSecondary">@color/md_theme_light_secondary</item>
+        <item name="colorOnSecondary">@color/md_theme_light_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/md_theme_light_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/md_theme_light_onSecondaryContainer</item>
+        <item name="colorTertiary">@color/md_theme_light_tertiary</item>
+        <item name="colorOnTertiary">@color/md_theme_light_onTertiary</item>
+        <item name="colorTertiaryContainer">@color/md_theme_light_tertiaryContainer</item>
+        <item name="colorOnTertiaryContainer">@color/md_theme_light_onTertiaryContainer</item>
+        <item name="colorError">@color/md_theme_light_error</item>
+        <item name="colorOnError">@color/md_theme_light_onError</item>
+        <item name="colorErrorContainer">@color/md_theme_light_errorContainer</item>
+        <item name="colorOnErrorContainer">@color/md_theme_light_onErrorContainer</item>
+        <item name="colorOutline">@color/md_theme_light_outline</item>
+        <item name="android:colorBackground">@color/md_theme_light_background</item>
+        <item name="colorOnBackground">@color/md_theme_light_onBackground</item>
+        <item name="colorSurface">@color/md_theme_light_surface</item>
+        <item name="colorOnSurface">@color/md_theme_light_onSurface</item>
+        <item name="colorSurfaceVariant">@color/md_theme_light_surfaceVariant</item>
+        <item name="colorOnSurfaceVariant">@color/md_theme_light_onSurfaceVariant</item>
+        <item name="colorSurfaceInverse">@color/md_theme_light_inverseSurface</item>
+        <item name="colorOnSurfaceInverse">@color/md_theme_light_inverseOnSurface</item>
+        <item name="colorPrimaryInverse">@color/md_theme_light_inversePrimary</item>
+        <item name="android:windowBackground">@color/md_theme_light_background</item>
+        <item name="android:navigationBarColor">@color/md_theme_light_background</item>
     </style>
 
     <!-- Add common attributes here with highest priority to override base attributes except palette colors -->

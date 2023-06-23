@@ -94,7 +94,7 @@ android {
             matchingFallbacks = ['staging', 'debug']
             manifestPlaceholders.put(buildVariables.manifestPlaceholder.crashCollectionEnabled, true)
             firebaseCrashlytics {
-                mappingFileUploadEnabled true
+                mappingFileUploadEnabled false
             }
         }
     }
@@ -199,6 +199,11 @@ dependencies {
     implementation "androidx.datastore:datastore:${versions.datastore}"
     implementation "androidx.fragment:fragment-ktx:${versions.fragment}"
     implementation "androidx.hilt:hilt-navigation-fragment:${versions.navigationFragment}"
+    implementation "androidx.leanback:leanback:${versions.leanback}"
+    implementation "androidx.leanback:leanback-grid:${versions.leanback_grid}"
+    implementation "androidx.leanback:leanback-paging:${versions.leanback_paging}"
+    implementation "androidx.leanback:leanback-preference:${versions.leanback}"
+    implementation "androidx.leanback:leanback-tab:${versions.leanback_tab}"
     implementation "androidx.lifecycle:lifecycle-common-java8:${versions.lifecycle}"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:${versions.lifecycle}"
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:${versions.lifecycle}"
